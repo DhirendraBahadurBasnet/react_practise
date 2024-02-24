@@ -1,0 +1,32 @@
+//var React = require('react');
+import React from 'react';
+//var ReactDOM = require('react-dom');
+import ReactDOM from 'react-dom';
+import './index.css'
+import Hello from './Hello';
+
+const he = "laptop";
+const ha = "computer";
+const datee = new Date().toLocaleDateString();
+const timee = new Date().toLocaleTimeString();
+const img1 = "https://picsum.photos/200";
+const img2 = "https://picsum.photos/200/250";
+
+const head= {
+    color : 'red', 
+    textTransform : 'capitalize',
+}
+ReactDOM.render(
+<React.Fragment>
+<h1 className="hell">{`this is my ${he} and ${ha}`}</h1>
+<Hello />
+<Hello />
+<p style={head}>this is paragraph</p>
+<p>{`this is current date ${datee} and time is ${timee}`}</p>
+<div>
+<img src={img1} alt="no img"/>
+<img src={img2} alt="no img"/>
+</div>
+<p>{`${<img src={img2} alt="no img"/>} ${<img src={img1} alt="no img"/>}`}</p>
+</React.Fragment>,
+ document.getElementById("root"));
